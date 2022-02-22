@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     
@@ -28,5 +28,14 @@ public class Player : MonoBehaviour
 
         anim.SetFloat("Forward", forward);
         anim.SetFloat("Right", strafe);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("Jump");
+            Debug.Log("Jump");
+        }
+        {
+            anim.SetTrigger("Jump");
+        }
     }
 }
