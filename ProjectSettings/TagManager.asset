@@ -10,6 +10,7 @@ TagManager:
   - LedgePlat
   - SquareObst
   - Pendulum
+  - Item
   layers:
   - Default
   - TransparentFX
