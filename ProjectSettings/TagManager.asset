@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - AirPlatform
   - LedgePlat
+  - SquareObst
+  - Pendulum
   layers:
   - Default
   - TransparentFX
