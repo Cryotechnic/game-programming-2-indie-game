@@ -12,16 +12,16 @@ public class CountdownTimer : MonoBehaviour
    private void Start() {
        StartCoroutine(countdownTimeLeft());   
    }
+   
    IEnumerator countdownTimeLeft(){
          while(countdownTime > 0){
              countdownText.text = countdownTime.ToString();
              yield return new WaitForSeconds(1f);
              countdownTime--;
-         }
-   countdownText.text = "Time's Up!";
-   yield return new WaitForSeconds(1f);
-   countdownText.text = "Restarting level...";
-   SceneManager.LoadScene("Level1");
+    }
+    countdownText.text = "Time's Up!";
+    yield return new WaitForSeconds(1f);
+    countdownText.text = "Restarting level...";
+    SceneManager.LoadScene("Level1");
    }
-
 }
