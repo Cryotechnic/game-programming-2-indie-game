@@ -8,6 +8,9 @@ public class ScoreSystem : MonoBehaviour
    public GameObject scoreText;
    public static int score;
 
+    private void Start() {
+        score = 0; // FIXME: Will this be reset every time the scene is loaded
+    }
     // Update is called once per frame
     void Update()
     {

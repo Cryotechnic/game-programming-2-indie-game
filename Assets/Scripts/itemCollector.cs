@@ -17,6 +17,10 @@ public class itemCollector : MonoBehaviour
     private void Update() {
         if (gemCountLevel1 == 0) {
             SceneManager.LoadScene("Level2");
+        } else if (gemCountLevel2 == 0) {
+            SceneManager.LoadScene("MenuLevel");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
