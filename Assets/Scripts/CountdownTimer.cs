@@ -22,6 +22,8 @@ public class CountdownTimer : MonoBehaviour
     countdownText.text = "Time's Up!";
     yield return new WaitForSeconds(1f);
     countdownText.text = "Restarting level...";
+    // Sleep for 3 seconds
+    yield return new WaitForSeconds(3f);
     SceneManager.LoadScene("Level1");
    }
 }
