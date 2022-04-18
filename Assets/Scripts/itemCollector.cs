@@ -29,7 +29,12 @@ public class itemCollector : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             AudioSource.PlayClipAtPoint(collectSound, transform.position);
-            ScoreSystem.score += 50;
+            if (SceneManager.GetActiveScene().name == "Level1") {
+                ScoreSystem.scoreLv1 += 50;
+            } else if (SceneManager.GetActiveScene().name == "Level2") {
+                ScoreSystem.scoreLv2 += 50;
+            }
+            // ScoreSystem.score += 50;
             Destroy(gameObject);
             Scene currentScene = SceneManager.GetActiveScene();
             string sceneName = currentScene.name;   
